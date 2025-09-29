@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  neon-local:
+    image: neondatabase/neon_local:latest
+    container_name: neon-local
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env.development
+
+  app:
+    build:
+      context: .
+      target: dev
+    container_name: acquisitions-app
+    env_file:
+      - .env.development
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
+    depends_on:
+      - neon-local
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    # The app's DATABASE_URL in .env.development must point to the neon-local service

@@ -98,3 +98,30 @@
 {"level":"info","message":"::1 - - [29/Sep/2025:11:41:22 +0000] \"GET /health HTTP/1.1\" 429 79 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
 {"ip":"::1","level":"warn","limit":5,"message":"Rate limit exceeded","path":"/health","role":"guest","service":"acquisitions-api","ua":"PostmanRuntime/7.48.0"}
 {"level":"info","message":"::1 - - [29/Sep/2025:11:41:55 +0000] \"POST /health HTTP/1.1\" 429 79 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"ip":"::ffff:192.168.65.1","level":"warn","message":"Bot request blocked","path":"/health","service":"acquisitions-api","ua":"PostmanRuntime/7.48.0"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [29/Sep/2025:12:07:51 +0000] \"POST /health HTTP/1.1\" 403 68 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"ip":"::ffff:192.168.65.1","level":"warn","message":"Bot request blocked","path":"/health","service":"acquisitions-api","ua":"PostmanRuntime/7.48.0"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [29/Sep/2025:12:08:22 +0000] \"GET /health HTTP/1.1\" 403 68 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"ip":"::ffff:192.168.65.1","level":"warn","message":"Bot request blocked","path":"/api/auth/sign-up","service":"acquisitions-api","ua":"PostmanRuntime/7.48.0"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [29/Sep/2025:12:10:27 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 403 68 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Bella,bela@yahoo.com,$2b$10$/54sWW1ZxHkcnD3C7LXh8ueby988lRhqc0u4uarEkpSU6JApZGk9a,user","service":"acquisitions-api"}
+{"cause":{"name":"NeonDbError","sourceError":{}},"level":"error","message":"Signup.error Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Bella,bela@yahoo.com,$2b$10$/54sWW1ZxHkcnD3C7LXh8ueby988lRhqc0u4uarEkpSU6JApZGk9a,user","params":["Bella","bela@yahoo.com","$2b$10$/54sWW1ZxHkcnD3C7LXh8ueby988lRhqc0u4uarEkpSU6JApZGk9a","user"],"query":"insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"","service":"acquisitions-api","stack":"Error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Bella,bela@yahoo.com,$2b$10$/54sWW1ZxHkcnD3C7LXh8ueby988lRhqc0u4uarEkpSU6JApZGk9a,user\n    at NeonHttpPreparedQuery.queryWithCache (file:///usr/src/app/node_modules/drizzle-orm/pg-core/session.js:41:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async NeonHttpPreparedQuery.execute (file:///usr/src/app/node_modules/drizzle-orm/neon-http/session.js:45:20)\n    at async createUser (file:///usr/src/app/src/services/auth.service.js:56:23)\n    at async signup (file:///usr/src/app/src/controllers/auth.controller.js:20:18)"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [29/Sep/2025:12:11:32 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 1116 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"User bela@yahoo.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: bela@yahoo.com","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [29/Sep/2025:12:14:28 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 112 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
