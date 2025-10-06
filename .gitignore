@@ -1,2 +1,6 @@
 node_modules
 .env.*.neon_local/
+
+
+coverage/
+lcov.info

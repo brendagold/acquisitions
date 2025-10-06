@@ -1,0 +1,81 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      NODE_ENV: test
+      NODE_OPTIONS: --experimental-vm-modules
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - id: test
+        name: Run test suite with coverage
+        run: npm test -- --coverage
+
+      - name: Annotate test failure
+        if: failure() && steps.test.outcome == 'failure'
+        shell: bash
+        run: |
+          echo "::error title=Tests failed::Some tests failed. Run 'NODE_ENV=test npm test' locally and inspect the logs for details."
+
+      - name: Upload coverage artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ github.sha }}
+          path: |
+            coverage/**
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Test Summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            STATUS="passed";
+            if [ "${{ steps.test.outcome }}" != "success" ]; then STATUS="failed"; fi
+            echo "## Test Results";
+            echo "";
+            echo "- Outcome: ${STATUS}";
+            if [ -f coverage/coverage-summary.json ]; then
+              LINES=$(jq -r '.total.lines.pct' coverage/coverage-summary.json 2>/dev/null || echo "");
+              STATEMENTS=$(jq -r '.total.statements.pct' coverage/coverage-summary.json 2>/dev/null || echo "");
+              BRANCHES=$(jq -r '.total.branches.pct' coverage/coverage-summary.json 2>/dev/null || echo "");
+              FUNCTIONS=$(jq -r '.total.functions.pct' coverage/coverage-summary.json 2>/dev/null || echo "");
+              echo "";
+              echo "Coverage:";
+              echo "- Lines: ${LINES}%";
+              echo "- Statements: ${STATEMENTS}%";
+              echo "- Branches: ${BRANCHES}%";
+              echo "- Functions: ${FUNCTIONS}%";
+            else
+              echo "";
+              echo "No coverage summary found. Ensure your test runner generates 'coverage/coverage-summary.json'.";
+            fi
+            echo "";
+            echo "Coverage artifacts uploaded as 'coverage-${{ github.sha }}'.";
+          } >> $GITHUB_STEP_SUMMARY
