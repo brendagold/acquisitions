@@ -22,7 +22,7 @@ export const getAllUsers = async () => {
   }
 };
 
-export const getUserById = async (id) => {
+export const getUserById = async id => {
   try {
     const [user] = await db
       .select(userSelect)
@@ -40,7 +40,11 @@ export const getUserById = async (id) => {
 export const updateUser = async (id, updates) => {
   try {
     // Ensure user exists
-    const [existing] = await db.select().from(users).where(eq(users.id, id)).limit(1);
+    const [existing] = await db
+      .select()
+      .from(users)
+      .where(eq(users.id, id))
+      .limit(1);
     if (!existing) {
       throw new Error('User not found');
     }
@@ -84,7 +88,7 @@ export const updateUser = async (id, updates) => {
   }
 };
 
-export const deleteUser = async (id) => {
+export const deleteUser = async id => {
   try {
     const [deleted] = await db
       .delete(users)

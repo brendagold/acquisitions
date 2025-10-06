@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 
 services:
   app:
@@ -11,8 +11,7 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - "3000:3000"
+      - '3000:3000'
     restart: unless-stopped
-
 # Note: In production we do NOT run Neon Local. The app connects to the managed Neon
 # Cloud database using the DATABASE_URL provided in .env.production (or external secrets).

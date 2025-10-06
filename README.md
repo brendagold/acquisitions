@@ -33,14 +33,14 @@ Your Node app reads `process.env.DATABASE_URL` in `src/config/database.js` and u
 
 ## Development (Neon Local with ephemeral branches)
 
-1) Configure `.env.development` with your Neon details:
+1. Configure `.env.development` with your Neon details:
 
 - `NEON_API_KEY`
 - `NEON_PROJECT_ID`
 - `PARENT_BRANCH_ID` (set to an existing branch ID to enable ephemeral branches, e.g., your main branch ID)
 - `DATABASE_URL` should already be `postgres://neon:npg@neon-local:5432/neondb?sslmode=require`
 
-2) Start the stack:
+2. Start the stack:
 
 ```
 # Uses dev target with file watching and Neon Local sidecar
@@ -51,18 +51,19 @@ docker compose -f docker-compose.dev.yml up --build
 - Postgres (via Neon Local): `postgres://neon:npg@localhost:5432/neondb?sslmode=require`
 
 Notes:
+
 - Neon Local supports both the Postgres driver and the Neon serverless driver via a single connection string.
 - With `PARENT_BRANCH_ID` set, Neon Local creates an ephemeral branch on start and deletes it on stop.
 
 ## Production (Neon Cloud)
 
-1) Set the Neon Cloud `DATABASE_URL` in `.env.production` (or inject it via your platform’s secret manager). Example:
+1. Set the Neon Cloud `DATABASE_URL` in `.env.production` (or inject it via your platform’s secret manager). Example:
 
 ```
 DATABASE_URL=postgresql://USER:PASSWORD@<your-endpoint>-pooler.<region>.aws.neon.tech/DBNAME?sslmode=require
 ```
 
-2) Build and run the production container locally (for validation):
+2. Build and run the production container locally (for validation):
 
 ```
 docker compose -f docker-compose.prod.yml up --build -d
