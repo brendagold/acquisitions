@@ -44,12 +44,10 @@ export const authenticateToken = (req, res, next) => {
     req.user = { id: payload.id, email: payload.email, role: payload.role };
     next();
   } catch (e) {
-    return res
-      .status(401)
-      .json({
-        error: 'unauthorized',
-        message: `Invalid or expired authentication token : ${e}`,
-      });
+    return res.status(401).json({
+      error: 'unauthorized',
+      message: `Invalid or expired authentication token : ${e}`,
+    });
   }
 };
 
@@ -63,20 +61,16 @@ export const requireRole =
         .json({ error: 'unauthorized', message: 'Authentication required' });
     }
     if (!Array.isArray(roles) || roles.length === 0) {
-      return res
-        .status(500)
-        .json({
-          error: 'server_error',
-          message: 'Authorization misconfigured: roles array is empty',
-        });
+      return res.status(500).json({
+        error: 'server_error',
+        message: 'Authorization misconfigured: roles array is empty',
+      });
     }
     if (!roles.includes(req.user.role)) {
-      return res
-        .status(403)
-        .json({
-          error: 'forbidden',
-          message: `Requires role in [${roles.join(', ')}]`,
-        });
+      return res.status(403).json({
+        error: 'forbidden',
+        message: `Requires role in [${roles.join(', ')}]`,
+      });
     }
     next();
   };

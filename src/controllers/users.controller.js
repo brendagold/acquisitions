@@ -42,12 +42,10 @@ export const getUserById = async (req, res, next) => {
     const isAdmin = authUser?.role === 'admin';
     const isSelf = Number(authUser?.id) === Number(id);
     if (!isAdmin && !isSelf) {
-      return res
-        .status(403)
-        .json({
-          error: 'forbidden',
-          message: 'You can only access your own profile',
-        });
+      return res.status(403).json({
+        error: 'forbidden',
+        message: 'You can only access your own profile',
+      });
     }
 
     const user = await getUserByIdService(id);
@@ -72,24 +70,20 @@ export const updateUser = async (req, res, next) => {
     // Validate path param
     const parsedParams = userIdSchema.safeParse(req.params);
     if (!parsedParams.success) {
-      return res
-        .status(400)
-        .json({
-          error: 'Validation failed',
-          details: parsedParams.error.format(),
-        });
+      return res.status(400).json({
+        error: 'Validation failed',
+        details: parsedParams.error.format(),
+      });
     }
     const { id } = parsedParams.data;
 
     // Validate body
     const parsedBody = updateUserSchema.safeParse(req.body);
     if (!parsedBody.success) {
-      return res
-        .status(400)
-        .json({
-          error: 'Validation failed',
-          details: parsedBody.error.format(),
-        });
+      return res.status(400).json({
+        error: 'Validation failed',
+        details: parsedBody.error.format(),
+      });
     }
     const updates = parsedBody.data;
 
@@ -106,12 +100,10 @@ export const updateUser = async (req, res, next) => {
 
     // Only self or admin can update
     if (!isAdmin && !isSelf) {
-      return res
-        .status(403)
-        .json({
-          error: 'forbidden',
-          message: 'You can only update your own account',
-        });
+      return res.status(403).json({
+        error: 'forbidden',
+        message: 'You can only update your own account',
+      });
     }
 
     // Only admin can change role
@@ -151,12 +143,10 @@ export const deleteUser = async (req, res, next) => {
   try {
     const parsedParams = userIdSchema.safeParse(req.params);
     if (!parsedParams.success) {
-      return res
-        .status(400)
-        .json({
-          error: 'Validation failed',
-          details: parsedParams.error.format(),
-        });
+      return res.status(400).json({
+        error: 'Validation failed',
+        details: parsedParams.error.format(),
+      });
     }
     const { id } = parsedParams.data;
 
