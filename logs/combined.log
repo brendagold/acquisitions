@@ -172,3 +172,108 @@
 {"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
 {"level":"info","message":"Retrieved user 2","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:39:09 +0000] \"GET /api/users/2 HTTP/1.1\" 200 191 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:17:59:11 +0000] \"GET /api/users/2 HTTP/1.1\" 401 66 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:00:27 +0000] \"POST /api/auth/sign-1n HTTP/1.1\" 404 156 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"User bela@yahoo.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: bela@yahoo.com","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:01:08 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 112 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Retrieved user 2","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:01:23 +0000] \"GET /api/users/2 HTTP/1.1\" 200 191 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Retrieved user 4","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:01:28 +0000] \"GET /api/users/4 HTTP/1.1\" 200 189 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:01:33 +0000] \"GET /api/users/2 HTTP/1.1\" 401 66 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:01:41 +0000] \"GET /api/users/4 HTTP/1.1\" 401 66 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"ip":"::ffff:192.168.65.1","level":"warn","limit":5,"message":"Rate limit exceeded","path":"/api/users/4","role":"guest","service":"acquisitions-api","ua":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:01:46 +0000] \"GET /api/users/4 HTTP/1.1\" 429 79 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:02:16 +0000] \"GET /api/users HTTP/1.1\" 403 58 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:02:37 +0000] \"GET /api/4 HTTP/1.1\" 404 144 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:02:54 +0000] \"GET /api/user/4 HTTP/1.1\" 404 149 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Retrieved user 4","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:02:58 +0000] \"GET /api/users/4 HTTP/1.1\" 200 189 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Retrieved user 4","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:08:41 +0000] \"GET /api/users/4 HTTP/1.1\" 200 189 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:08:46 +0000] \"GET /api/users/2 HTTP/1.1\" 403 70 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Retrieved user 4","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:08:53 +0000] \"GET /api/users/4 HTTP/1.1\" 200 189 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:19:29 +0000] \"DELETE /api/users/4 HTTP/1.1\" 401 66 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:20:38 +0000] \"DELETE /api/users/4 HTTP/1.1\" 401 62 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:20:54 +0000] \"GET /api/users HTTP/1.1\" 401 62 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"User maryb@yahoo.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: maryb@yahoo.com","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:22:21 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 114 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:22:32 +0000] \"GET /api/users HTTP/1.1\" 200 772 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Deleted user 4 (by admin)","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:22:49 +0000] \"DELETE /api/users/4 HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:23:06 +0000] \"GET /api/users/4 HTTP/1.1\" 404 48 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:18:23:11 +0000] \"GET /api/users HTTP/1.1\" 200 631 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}

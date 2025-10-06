@@ -5,15 +5,8 @@ import { jwttoken } from '#utils/jwt.js';
 export const attachUser = (req, _res, next) => {
   try {
     const cookieToken = req.cookies?.token;
-    let token = cookieToken;
+    const token = cookieToken;
 
-    // Optional: also allow Bearer token for non-cookie clients
-    if (!token) {
-      const auth = req.get('Authorization');
-      if (auth && auth.startsWith('Bearer ')) {
-        token = auth.slice(7);
-      }
-    }
 
     if (token) {
       const payload = jwttoken.verify(token);
@@ -29,10 +22,40 @@ export const attachUser = (req, _res, next) => {
   }
 };
 
-// Optional guard if you want route-level enforcement
+// Require any authenticated user
 export const requireAuth = (req, res, next) => {
   if (!req.user) {
     return res.status(401).json({ error: 'unauthorized', message: 'Authentication required' });
+  }
+  next();
+};
+
+// Strict auth that verifies JWT from HTTP-only cookie only (no headers)
+export const authenticateToken = (req, res, next) => {
+  try {
+    const token = req.cookies?.token;
+    if (!token) {
+      return res.status(401).json({ error: 'Access denied', message: 'Insufficient permissions' });
+    }
+    const payload = jwttoken.verify(token);
+    req.user = { id: payload.id, email: payload.email, role: payload.role };
+    next();
+  } catch (e) {
+    return res.status(401).json({ error: 'unauthorized', message: `Invalid or expired authentication token : ${e}` });
+    
+  }
+};
+
+// Require that the authenticated user's role is one of the allowed roles
+export const requireRole = (roles = []) => (req, res, next) => {
+  if (!req.user) {
+    return res.status(401).json({ error: 'unauthorized', message: 'Authentication required' });
+  }
+  if (!Array.isArray(roles) || roles.length === 0) {
+    return res.status(500).json({ error: 'server_error', message: 'Authorization misconfigured: roles array is empty' });
+  }
+  if (!roles.includes(req.user.role)) {
+    return res.status(403).json({ error: 'forbidden', message: `Requires role in [${roles.join(', ')}]` });
   }
   next();
 };

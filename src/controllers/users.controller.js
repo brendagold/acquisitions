@@ -27,6 +27,14 @@ export const getUserById = async (req, res, next) => {
 
     const { id } = parsed.data;
 
+    // Authorization: non-admins can only access their own profile
+    const authUser = req.user;
+    const isAdmin = authUser?.role === 'admin';
+    const isSelf = Number(authUser?.id) === Number(id);
+    if (!isAdmin && !isSelf) {
+      return res.status(403).json({ error: 'forbidden', message: 'You can only access your own profile' });
+    }
+
     const user = await getUserByIdService(id);
     if (!user) {
       return res.status(404).json({ error: 'Not Found', message: 'User not found' });
@@ -106,15 +114,13 @@ export const deleteUser = async (req, res, next) => {
     }
 
     const isAdmin = authUser.role === 'admin';
-    const isSelf = Number(authUser.id) === Number(id);
-
-    if (!isAdmin && !isSelf) {
-      return res.status(403).json({ error: 'forbidden', message: 'You can only delete your own account' });
+    if (!isAdmin) {
+      return res.status(403).json({ error: 'forbidden', message: 'Only admins can delete users' });
     }
 
     await deleteUserService(id);
 
-    logger.info(`Deleted user ${id}${isAdmin ? ' (by admin)' : isSelf ? ' (self)' : ''}`);
+    logger.info(`Deleted user ${id} (by admin)`);
     return res.status(200).json({ message: 'User deleted successfully' });
   } catch (e) {
     logger.error('Delete user error', e);

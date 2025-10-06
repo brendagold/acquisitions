@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser';
 import authRoutes from '#routes/auth.routes.js';
 import usersRoutes from '#routes/users.routes.js';
 import securityMiddleware from '#middleware/security.middleware.js';
-import { attachUser } from '#middleware/auth.middleware.js';
 
 
 const app = express();
@@ -19,9 +18,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 app.use(morgan('combined', { stream: { write: message => logger.info(message.trim()) }}));
-
-// Attach req.user (if present) before security middleware and routes
-app.use(attachUser);
 
 app.use(securityMiddleware);
 
