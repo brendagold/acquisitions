@@ -22,7 +22,7 @@ describe('API Endpoints', ()=> {
   });
   describe('GET /nonexistent', () => {
     it('should return 404 for non-existent routes', async () => {
-      const response = await request(app).get('/nonexistent').expect(200);
+      const response = await request(app).get('/nonexistent').expect(404);
 
       expect(response.body).toHaveProperty('error', 'Route not found');
 
