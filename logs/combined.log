@@ -125,3 +125,50 @@
 {"level":"info","message":"User bela@yahoo.com created successfully","service":"acquisitions-api"}
 {"level":"info","message":"User registered successfully: bela@yahoo.com","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:192.168.65.1 - - [29/Sep/2025:12:14:28 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 112 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:05:39 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:05:40 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users Cannot convert undefined or null to object","service":"acquisitions-api","stack":"TypeError: Cannot convert undefined or null to object\n    at Function.entries (<anonymous>)\n    at orderSelectedFields (file:///usr/src/app/node_modules/drizzle-orm/utils.js:53:17)\n    at file:///usr/src/app/node_modules/drizzle-orm/utils.js:63:22\n    at Array.reduce (<anonymous>)\n    at orderSelectedFields (file:///usr/src/app/node_modules/drizzle-orm/utils.js:53:33)\n    at file:///usr/src/app/node_modules/drizzle-orm/pg-core/query-builders/select.js:770:26\n    at Object.startActiveSpan (file:///usr/src/app/node_modules/drizzle-orm/tracing.js:8:14)\n    at PgSelectBase._prepare (file:///usr/src/app/node_modules/drizzle-orm/pg-core/query-builders/select.js:769:19)\n    at file:///usr/src/app/node_modules/drizzle-orm/pg-core/query-builders/select.js:797:19\n    at Object.startActiveSpan (file:///usr/src/app/node_modules/drizzle-orm/tracing.js:8:14)"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:05:57 +0000] \"GET /api/users HTTP/1.1\" 500 1125 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:07:22 +0000] \"POST /api/users HTTP/1.1\" 404 149 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users Cannot convert undefined or null to object","service":"acquisitions-api","stack":"TypeError: Cannot convert undefined or null to object\n    at Function.entries (<anonymous>)\n    at orderSelectedFields (file:///usr/src/app/node_modules/drizzle-orm/utils.js:53:17)\n    at file:///usr/src/app/node_modules/drizzle-orm/utils.js:63:22\n    at Array.reduce (<anonymous>)\n    at orderSelectedFields (file:///usr/src/app/node_modules/drizzle-orm/utils.js:53:33)\n    at file:///usr/src/app/node_modules/drizzle-orm/pg-core/query-builders/select.js:770:26\n    at Object.startActiveSpan (file:///usr/src/app/node_modules/drizzle-orm/tracing.js:8:14)\n    at PgSelectBase._prepare (file:///usr/src/app/node_modules/drizzle-orm/pg-core/query-builders/select.js:769:19)\n    at file:///usr/src/app/node_modules/drizzle-orm/pg-core/query-builders/select.js:797:19\n    at Object.startActiveSpan (file:///usr/src/app/node_modules/drizzle-orm/tracing.js:8:14)"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:07:27 +0000] \"GET /api/users HTTP/1.1\" 500 1125 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:13:03 +0000] \"GET /api/users HTTP/1.1\" 200 488 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:13:11 +0000] \"GET /api/users HTTP/1.1\" 200 488 \"-\" \"PostmanRuntime/7.48.0\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:38:56 +0000] \"GET /api/users HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"SHIELD","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"RATE_LIMIT","service":"acquisitions-api"}
+{"level":"debug","message":"Arcjet rule result","reason":"BOT","service":"acquisitions-api"}
+{"level":"info","message":"Retrieved user 2","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:192.168.65.1 - - [06/Oct/2025:16:39:09 +0000] \"GET /api/users/2 HTTP/1.1\" 200 191 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
